@@ -1,0 +1,808 @@
+/* =========================================================
+   유리나무 — 공통 스타일
+   ========================================================= */
+
+/* ---------- 디자인 토큰 ---------- */
+:root {
+  --color-bg: #FFFFFF;
+  --color-text: #111111;
+  --color-caption: #6B7280;
+  --color-line: #E5E7EB;
+  --color-accent: #2563EB; /* 링크 + 클래스 섹션 위 구분선 전용 */
+  --color-placeholder: #F3F4F6; /* 이미지 파일이 없을 때 자리표시자 */
+
+  --font-sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
+    system-ui, "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", "Segoe UI",
+    Roboto, sans-serif;
+
+  --content-max: 1120px;
+  --gutter: 24px;
+  --section-gap: 96px;
+}
+
+@media (max-width: 720px) {
+  :root {
+    --gutter: 20px;
+    --section-gap: 64px;
+  }
+}
+
+/* ---------- 리셋 / 기본 ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.7;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, p, ul, ol, dl, dd, figure {
+  margin: 0;
+}
+
+ul, ol {
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.container {
+  width: 100%;
+  max-width: calc(var(--content-max) + var(--gutter) * 2);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* ---------- 타이포그래피 ---------- */
+.headline {
+  font-size: clamp(40px, 7vw, 80px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+}
+
+.section-title {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.item-title {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+}
+
+.caption {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-caption);
+}
+
+.eyebrow {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* ---------- 링크 (모든 링크 텍스트 뒤 ↗) ---------- */
+.link {
+  color: var(--color-accent);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.link::after {
+  content: "↗";
+  content: "↗" / "";
+  display: inline-block;
+  margin-left: 0.3em;
+  transition: transform 0.15s ease;
+}
+
+.link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.link:hover::after {
+  transform: translate(2px, -2px);
+}
+
+.link-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  font-size: 15px;
+}
+
+/* ---------- 공통 헤더 ---------- */
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 72px;
+}
+
+.brand {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-size: 15px;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-list a {
+  font-weight: 500;
+}
+
+.nav-list a:hover,
+.nav-list a[aria-current="page"] {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 1px;
+}
+
+.nav-list a[aria-current="page"] {
+  font-weight: 700;
+}
+
+.nav-ext {
+  padding-left: 28px;
+  border-left: 1px solid var(--color-line);
+  line-height: 1.2;
+}
+
+/* ---------- 공통 푸터 ---------- */
+.site-footer {
+  margin-top: var(--section-gap);
+  border-top: 1px solid var(--color-line);
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px 32px;
+  padding-block: 32px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+}
+
+.footer-caption {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--color-caption);
+}
+
+/* ---------- 섹션 ---------- */
+.section {
+  margin-top: var(--section-gap);
+}
+
+.section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin-bottom: 24px;
+}
+
+/* ---------- 이미지 자리 (배경 없이 실선만) ---------- */
+.ph {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: var(--ratio, 4 / 3);
+  padding: 16px;
+  border: 1px solid var(--color-line);
+  color: var(--color-caption);
+  font-size: 15px;
+  text-align: center;
+}
+
+.ph--portrait { --ratio: 3 / 4; }
+
+/* 실제 이미지로 교체했을 때 같은 비율 유지 */
+img.ph {
+  padding: 0;
+  object-fit: cover;
+}
+
+/* ---------- 그리드 ---------- */
+.grid {
+  display: grid;
+  gap: 16px;
+}
+
+.grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 24px; }
+.grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+@media (max-width: 900px) {
+  .grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 720px) {
+  .grid-2 { grid-template-columns: 1fr; }
+}
+
+.work figcaption {
+  margin-top: 10px;
+}
+
+/* ---------- 갤러리 그리드 (gallery.js가 채움) ---------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.gallery-item {
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.03);
+}
+
+.gallery-status {
+  grid-column: 1 / -1;
+  padding-block: 24px;
+  border-block: 1px solid var(--color-line);
+  color: var(--color-caption);
+  font-size: 15px;
+}
+
+@media (max-width: 720px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+}
+
+/* ---------- 메인 히어로 ---------- */
+.hero-label {
+  padding-top: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-align: right;
+  color: var(--color-caption);
+}
+
+/* 데스크탑: 좌 55% (제목 위 / 소개 아래) · 우 45% 이미지 */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 55fr) minmax(0, 45fr);
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "head media"
+    "body media";
+  gap: 32px 48px;
+  margin-top: 32px;
+}
+
+.hero-head { grid-area: head; }
+.hero-body { grid-area: body; align-self: end; }
+
+.hero-title {
+  font-size: clamp(40px, 5.2vw, 64px);
+  font-weight: 700; /* 800은 옆 작품 이미지를 눌러 보여서 한 단계 낮춤 */
+  line-height: 1.2;
+}
+
+.hero-name {
+  margin-top: 16px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.hero-intro {
+  max-width: 480px;
+}
+
+.hero-more {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.hero-media {
+  grid-area: media;
+  align-self: start;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 모바일: 제목 → 이미지 → 소개 */
+@media (max-width: 720px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: none;
+    grid-template-areas:
+      "head"
+      "media"
+      "body";
+    gap: 24px;
+    margin-top: 16px;
+  }
+
+  /* 40px, 384px보다 좁으면 두 줄이 유지되도록 조금씩 줄임 */
+  .hero-title {
+    font-size: clamp(32px, 10.4vw, 40px);
+  }
+
+  /* 좁은 화면에서는 두 줄로 고르게 나눔 */
+  .hero-label {
+    text-wrap: balance;
+  }
+}
+
+/* ---------- 서브 페이지 히어로 ---------- */
+.page-hero {
+  padding-top: 56px;
+}
+
+.page-hero .headline {
+  margin-top: 12px;
+  font-size: clamp(40px, 6vw, 64px);
+}
+
+.page-lead {
+  max-width: 36em;
+  margin-top: 20px;
+}
+
+/* ---------- 웹툰 시리즈 ---------- */
+.series-meta {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 24px;
+  margin-top: 16px;
+}
+
+.series-desc {
+  margin-top: 8px;
+}
+
+/* 대표 이미지 프레임 — 이미지가 없으면 img의 onerror가 .is-empty를 붙여 회색 자리표시자로 */
+.media-frame {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 4 / 3;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.media-frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.media-frame-label {
+  display: none;
+  color: var(--color-caption);
+  font-size: 15px;
+}
+
+.media-frame.is-empty {
+  background: var(--color-placeholder);
+}
+
+.media-frame.is-empty .media-frame-label {
+  display: block;
+}
+
+/* webtoon.html — 1열, 크게 */
+.series + .series {
+  margin-top: 64px;
+  padding-top: 64px;
+  border-top: 1px solid var(--color-line);
+}
+
+.series > * {
+  max-width: 880px;
+}
+
+.series-title {
+  margin-top: 24px;
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+
+.series-intro {
+  margin-top: 8px;
+}
+
+/* 실선 테두리 버튼 (배경 없음) */
+.link.btn-line {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 20px;
+  border: 1px solid currentColor;
+  border-radius: 8px;
+}
+
+.link.btn-line:hover {
+  text-decoration: none;
+}
+
+.series .btn-line {
+  margin-top: 24px;
+}
+
+@media (max-width: 720px) {
+  .series + .series {
+    margin-top: 40px;
+    padding-top: 40px;
+  }
+
+  .series-title {
+    margin-top: 16px;
+  }
+}
+
+/* ---------- 그림책 ---------- */
+.book {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  align-items: center;
+  gap: 24px;
+}
+
+/* 표지 — 세로 4:5, 파일이 없으면 회색 자리표시자 (.media-frame 참고) */
+.media-frame--cover {
+  aspect-ratio: 4 / 5;
+  border-radius: 8px;
+}
+
+.book-body > * + * {
+  margin-top: 8px;
+}
+
+.book-intro {
+  font-size: 15px;
+}
+
+.book-body .link-list {
+  margin-top: 12px;
+}
+
+@media (max-width: 720px) {
+  .book {
+    gap: 16px;
+  }
+}
+
+/* ---------- 줄 목록 (얇은 실선으로 구분) ---------- */
+.rows {
+  border-top: 1px solid var(--color-line);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 16px 48px;
+  padding-block: 40px;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.row-body > * + * {
+  margin-top: 12px;
+}
+
+@media (max-width: 720px) {
+  .row {
+    grid-template-columns: 1fr;
+    padding-block: 32px;
+  }
+}
+
+/* ---------- 문의 줄 ---------- */
+.cta-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  padding-block: 24px;
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+}
+
+/* ---------- 클래스 섹션 (파란 구분선) ---------- */
+.class-block {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  align-items: end;
+  gap: 32px 48px;
+  padding-top: 24px;
+  border-top: 2px solid var(--color-accent);
+}
+
+.class-block--solo {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.class-eyebrow {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-caption);
+}
+
+.class-block .headline {
+  margin-top: 4px;
+  font-size: clamp(32px, 4.4vw, 48px);
+  line-height: 1.2;
+}
+
+.class-sub {
+  margin-top: 8px;
+  font-size: 18px;
+}
+
+.class-cta {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--color-line);
+  font-size: 17px;
+}
+
+/* class.html */
+.class-author {
+  max-width: 480px;
+  padding-top: 56px;
+}
+
+.class-intro {
+  margin-top: 64px;
+}
+
+.class-body {
+  max-width: 36em;
+  margin-top: 24px;
+}
+
+.class-trust {
+  margin-top: 16px;
+}
+
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+@media (max-width: 720px) {
+  .class-author {
+    padding-top: 32px;
+  }
+
+  .class-intro {
+    margin-top: 40px;
+  }
+}
+
+/* ---------- 모바일 ---------- */
+@media (max-width: 720px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    min-height: 0;
+    padding-block: 18px 14px;
+  }
+
+  .site-nav {
+    width: 100%;
+    gap: 16px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+  }
+
+  .site-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-list {
+    gap: 16px;
+  }
+
+  .nav-ext {
+    padding-left: 16px;
+  }
+
+  .page-hero {
+    padding-top: 32px;
+  }
+
+  .class-block {
+    grid-template-columns: 1fr;
+  }
+
+  .class-cta {
+    justify-content: flex-start;
+  }
+}
+
+/* 360px 안팎: 메뉴가 한 줄에 다 들어가도록 간격을 좁힘 */
+@media (max-width: 400px) {
+  .site-nav,
+  .nav-list {
+    gap: 12px;
+  }
+
+  .nav-ext {
+    padding-left: 12px;
+  }
+}
+
+/* ---------- 라이트박스 (gallery.js) ---------- */
+html.lightbox-open {
+  overflow: hidden;
+  scrollbar-gutter: stable;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 80px;
+  background: rgba(17, 17, 17, 0.92);
+}
+
+.lightbox-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  user-select: none;
+}
+
+.lightbox-btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: none;
+  color: #FFFFFF;
+  font: inherit;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.75;
+  transition: opacity 0.15s ease;
+}
+
+.lightbox-btn:hover,
+.lightbox-btn:focus-visible {
+  opacity: 1;
+}
+
+.lightbox-btn:focus-visible {
+  outline: 2px solid #FFFFFF;
+  outline-offset: -6px;
+}
+
+.lightbox-close { top: 8px; right: 8px; }
+.lightbox-prev,
+.lightbox-next { top: 50%; transform: translateY(-50%); }
+.lightbox-prev { left: 12px; }
+.lightbox-next { right: 12px; }
+
+.lightbox-counter {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 720px) {
+  .lightbox {
+    padding: 64px 16px 88px;
+  }
+
+  .lightbox-prev,
+  .lightbox-next {
+    top: auto;
+    bottom: 12px;
+    transform: none;
+  }
+
+  .lightbox-counter {
+    bottom: 28px;
+  }
+}

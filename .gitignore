@@ -1,0 +1,10 @@
+node_modules/
+.vercel/
+_screenshots/
+
+# 일러스트 원본 — 용량이 커서 올리지 않음 (사이트는 illustration-web/의 웹용 이미지를 씀)
+assets/images/illustration/
+
+.DS_Store
+Thumbs.db
+desktop.ini

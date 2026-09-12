@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>유리나무 | 일러스트레이터 윤지영</title>
+  <meta name="description" content="일러스트레이터 윤지영(유리나무)의 일러스트, 웹툰·캐릭터, 그림책, 클래스 소개">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="assets/js/gallery.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">유리나무</a>
+      <nav class="site-nav" aria-label="주요 메뉴">
+        <ul class="nav-list">
+          <li><a href="illustration.html">일러스트</a></li>
+          <li><a href="webtoon.html">웹툰·캐릭터</a></li>
+          <li><a href="picturebook.html">그림책</a></li>
+          <li><a href="class.html">클래스</a></li>
+        </ul>
+        <a class="link nav-ext" href="https://kmong.com/@유리나무" target="_blank" rel="noopener">크몽</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- 히어로 -->
+    <p class="hero-label">ILLUSTRATION / COMICS / PICTURE&nbsp;BOOKS / CLASS</p>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-head">
+        <h1 class="headline hero-title" id="hero-title">그림에서 시작해,<br>이야기로 넓어집니다.</h1>
+        <p class="hero-name">일러스트레이터 윤지영</p>
+      </div>
+      <!-- gallery.json 첫 번째 이미지(full) -->
+      <div class="hero-media" data-gallery-hero></div>
+      <div class="hero-body">
+        <p class="hero-intro">그림으로 이야기를 만드는 일러스트레이터 유리나무(윤지영)예요. 일러스트와 인스타툰을 그리고, 그림책을 냈어요. 요즘은 AI를 그림 작업에 끌어들여 콘텐츠와 작은 창작 도구를 만들고 있어요.</p>
+        <a class="link hero-more" href="illustration.html">작품 더 보기</a>
+      </div>
+    </section>
+
+    <!-- 일러스트 -->
+    <section class="section" aria-labelledby="sec-illust">
+      <div class="section-head">
+        <h2 class="section-title" id="sec-illust">일러스트</h2>
+        <a class="link" href="illustration.html">전체 작품 보기</a>
+      </div>
+      <!-- gallery.json 상위 6장 -->
+      <ul class="gallery-grid" data-gallery data-limit="6"></ul>
+    </section>
+
+    <!-- 웹툰 · 캐릭터 (이미지 파일이 없으면 회색 자리표시자로 바뀜) -->
+    <section class="section" aria-labelledby="sec-webtoon">
+      <div class="section-head">
+        <h2 class="section-title" id="sec-webtoon">웹툰 · 캐릭터</h2>
+      </div>
+      <div class="grid grid-2">
+        <article>
+          <div class="media-frame">
+            <img src="assets/images/webtoon/eojjeoda.png" alt="어쩌다ai 대표 이미지" loading="lazy" onerror="this.parentNode.classList.add('is-empty'); this.remove()">
+            <span class="media-frame-label">대표 이미지</span>
+          </div>
+          <div class="series-meta">
+            <h3 class="item-title">어쩌다ai</h3>
+            <a class="link" href="https://www.instagram.com/eojjeoda_ai_toon/" target="_blank" rel="noopener">인스타그램</a>
+          </div>
+          <p class="series-desc caption">AI와 함께하는 작가의 일상을 그리는 인스타툰</p>
+        </article>
+        <article>
+          <div class="media-frame">
+            <img src="assets/images/webtoon/ssomm.png" alt="쏨쏨이 대표 이미지" loading="lazy" onerror="this.parentNode.classList.add('is-empty'); this.remove()">
+            <span class="media-frame-label">대표 이미지</span>
+          </div>
+          <div class="series-meta">
+            <h3 class="item-title">쏨쏨이</h3>
+            <a class="link" href="https://www.instagram.com/ssomm.ssomm/" target="_blank" rel="noopener">인스타그램</a>
+          </div>
+          <p class="series-desc caption">[PLACEHOLDER_SSOMM_INTRO]</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 그림책 -->
+    <section class="section" aria-labelledby="sec-book">
+      <div class="section-head">
+        <h2 class="section-title" id="sec-book">그림책</h2>
+      </div>
+      <!-- 표지 파일이 없으면 회색 자리표시자로 바뀜 -->
+      <div class="grid grid-2">
+        <article class="book">
+          <div class="media-frame media-frame--cover">
+            <img src="assets/images/picturebook/mom.jpg" alt="『엄마가 아픈 날』 표지" loading="lazy" onerror="this.parentNode.classList.add('is-empty'); this.remove()">
+            <span class="media-frame-label">표지 이미지</span>
+          </div>
+          <div class="book-body">
+            <h3 class="item-title">엄마가 아픈 날</h3>
+            <p class="caption">윤지영 지음 · 솔앤유 · 2023</p>
+            <p class="book-intro">[PLACEHOLDER_BOOK_INTRO_1]</p>
+            <ul class="link-list">
+              <li><a class="link" href="https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000005206247" target="_blank" rel="noopener">교보문고</a></li>
+              <li><a class="link" href="https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791192727141" target="_blank" rel="noopener">알라딘</a></li>
+              <li><a class="link" href="https://www.yes24.com/product/goods/118630707" target="_blank" rel="noopener">YES24</a></li>
+            </ul>
+          </div>
+        </article>
+        <article class="book">
+          <div class="media-frame media-frame--cover">
+            <img src="assets/images/picturebook/laundry.jpg" alt="『숲속세탁소』 표지" loading="lazy" onerror="this.parentNode.classList.add('is-empty'); this.remove()">
+            <span class="media-frame-label">표지 이미지</span>
+          </div>
+          <div class="book-body">
+            <h3 class="item-title">숲속세탁소</h3>
+            <p class="caption">유리나무 지음 · 솔앤유 · 2024</p>
+            <p class="book-intro">[PLACEHOLDER_BOOK_INTRO_2]</p>
+            <ul class="link-list">
+              <li><a class="link" href="https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000009167666" target="_blank" rel="noopener">교보문고</a></li>
+              <li><a class="link" href="https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791172760304" target="_blank" rel="noopener">알라딘</a></li>
+              <li><a class="link" href="https://www.yes24.com/product/goods/134783916" target="_blank" rel="noopener">YES24</a></li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 클래스 -->
+    <section class="section" aria-labelledby="sec-class">
+      <div class="class-block">
+        <div>
+          <p class="class-eyebrow">클래스 · 출강</p>
+          <h2 class="headline" id="sec-class">함께 만드는 창작의 시간</h2>
+          <p class="class-sub">그림 그리는 사람을 위한 AI 창작 수업</p>
+        </div>
+        <div class="class-cta">
+          <a class="link" href="class.html">수업 문의</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">유리나무</a>
+        <span class="footer-caption">ILLUSTRATOR YOON JIYOUNG</span>
+      </div>
+      <ul class="link-list">
+        <li><a class="link" href="https://www.instagram.com/eojjeoda_ai_toon/" target="_blank" rel="noopener">인스타그램</a></li>
+        <li><a class="link" href="https://kmong.com/@유리나무" target="_blank" rel="noopener">크몽</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>
