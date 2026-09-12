@@ -61,6 +61,20 @@ npm run preview
 - 원본 폴더(`assets/images/illustration/`)는 `.gitignore`로 GitHub에 올리지 않습니다. 다른 PC에서 작업하려면 원본을 따로 옮겨 오세요. 결과물(`illustration-web/`, `gallery.json`)은 커밋해야 사이트에 반영됩니다.
 - 웹툰 대표 이미지 · 그림책 표지는 이 스크립트 대상이 아닙니다. 폭 1600px 이하로 줄여서 넣는 것을 권장합니다.
 
+## 배포 (Vercel)
+
+GitHub 저장소 `yuriwood50-ai/yurinamu-site`(비공개)가 Vercel 프로젝트 `yurinamu-site`에 연결되어 있습니다. **`main` 브랜치에 푸시하면 자동으로 배포됩니다.**
+
+```bash
+git add -A
+git commit -m "작업 내용"
+git push
+```
+
+- 일러스트를 추가했다면 `npm run optimize:images` 실행 후 `assets/images/illustration-web/`과 `data/gallery.json`을 함께 커밋하세요.
+- 원본 폴더와 `_screenshots/`는 `.gitignore` · `.vercelignore`로 제외됩니다.
+- 푸시 없이 지금 폴더 그대로 배포하려면 `vercel --prod`를 실행합니다.
+
 ## 3. 자리표시자 목록
 
 줄 번호는 편집하면 바뀌니 **검색어**로 찾는 것이 가장 정확합니다.

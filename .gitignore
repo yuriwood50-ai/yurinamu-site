@@ -8,3 +8,6 @@ assets/images/illustration/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+.vercel
+.env*
