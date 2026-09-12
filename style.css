@@ -531,10 +531,22 @@ img.ph {
   gap: 24px;
 }
 
-/* 표지 — 세로 4:5, 파일이 없으면 회색 자리표시자 (.media-frame 참고) */
+/* 표지 — 너비는 칸에 맞추고 높이는 원본 비율대로. 파일이 없을 때만 4:5 회색 자리표시자 */
 .media-frame--cover {
-  aspect-ratio: 4 / 5;
+  display: block;
+  aspect-ratio: auto;
   border-radius: 8px;
+}
+
+.media-frame--cover img {
+  position: static;
+  display: block;
+  height: auto;
+}
+
+.media-frame--cover.is-empty {
+  display: flex;
+  aspect-ratio: 4 / 5;
 }
 
 .book-body > * + * {

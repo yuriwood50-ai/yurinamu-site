@@ -12,7 +12,7 @@
 | `assets/js/optimize-images.js` | 일러스트 원본 → 웹용·썸네일 이미지 + `gallery.json` 생성 (Node 스크립트, 사이트에서는 쓰지 않음) |
 | `assets/images/illustration/` | 일러스트 **원본** (직접 넣는 곳 · 용량이 커서 Git에는 올리지 않음) |
 | `assets/images/illustration-web/` | 스크립트가 만든 웹용 이미지 (직접 수정하지 않기) |
-| `assets/images/webtoon/`, `assets/images/picturebook/` | 웹툰 대표 이미지 · 그림책 표지 (아직 없음 → 아래 자리표시자 참고) |
+| `assets/images/webtoon/`, `assets/images/picturebook/` | 웹툰 대표 이미지 · 그림책 표지 |
 | `data/gallery.json` | 스크립트가 만든 일러스트 목록 (직접 수정하지 않기) |
 
 ## 1. 로컬에서 실행하기
@@ -79,13 +79,13 @@ git push
 
 줄 번호는 편집하면 바뀌니 **검색어**로 찾는 것이 가장 정확합니다.
 
-### 채워야 할 문구 — `[PLACEHOLDER_…]`
+### 채워야 할 문구
 
 | 검색어 | 들어갈 내용 | 위치 |
 |---|---|---|
-| `[PLACEHOLDER_SSOMM_INTRO]` | 쏨쏨이 한 줄 소개 | `index.html:84`, `webtoon.html:58` |
-| `[PLACEHOLDER_BOOK_INTRO_1]` | 『엄마가 아픈 날』 한 줄 소개 | `index.html:104`, `picturebook.html:51` |
-| `[PLACEHOLDER_BOOK_INTRO_2]` | 『숲속세탁소』 한 줄 소개 | `index.html:120`, `picturebook.html:67` |
+| `(쏨쏨이 한 줄 소개)` | 쏨쏨이 한 줄 소개 | `index.html:84`, `webtoon.html:58` |
+| `(엄마가 아픈 날 한 줄 소개)` | 『엄마가 아픈 날』 한 줄 소개 | `index.html:104`, `picturebook.html:51` |
+| `(숲속세탁소 한 줄 소개)` | 『숲속세탁소』 한 줄 소개 | `index.html:120`, `picturebook.html:67` |
 | `[PLACEHOLDER_CLASS_TOPICS]` | 수업 주제 | `class.html:54` |
 | `[PLACEHOLDER_CLASS_TARGET]` | 수업 대상 | `class.html:61` |
 | `[PLACEHOLDER_CLASS_FORMAT]` | 수업 형태 (온라인/오프라인, 회차, 인원 등) | `class.html:68` |
@@ -93,18 +93,16 @@ git push
 
 `class.html`의 네 곳은 바로 위에 `<!-- 여기를 채우세요 -->` 주석이 있습니다.
 
-### 넣어야 할 이미지 파일
+### 웹툰 대표 이미지 · 그림책 표지
 
-아래 경로에 파일을 넣기만 하면 됩니다. 파일이 없는 동안에는 회색 칸에 "대표 이미지" / "표지 이미지"가 자동으로 표시됩니다.
+교체하려면 같은 경로에 같은 이름으로 덮어쓰면 됩니다. 파일이 없으면 회색 칸에 "대표 이미지" / "표지 이미지"가 자동으로 표시됩니다.
 
-| 파일 | 내용 · 비율 | 쓰이는 곳 |
+| 파일 | 표시 방식 | 쓰이는 곳 |
 |---|---|---|
-| `assets/images/webtoon/eojjeoda.png` | 어쩌다ai 대표 이미지 · 가로 4:3 | `index.html`, `webtoon.html` |
-| `assets/images/webtoon/ssomm.png` | 쏨쏨이 대표 이미지 · 가로 4:3 | `index.html`, `webtoon.html` |
-| `assets/images/picturebook/mom.jpg` | 『엄마가 아픈 날』 표지 · 세로 4:5 | `index.html`, `picturebook.html` |
-| `assets/images/picturebook/laundry.jpg` | 『숲속세탁소』 표지 · 세로 4:5 | `index.html`, `picturebook.html` |
-
-비율이 달라도 칸에 맞춰 가운데 기준으로 잘려서 표시됩니다.
+| `assets/images/webtoon/eojjeoda.png` | 어쩌다ai · 가로 4:3 칸에 맞춰 가운데 기준으로 잘림 | `index.html`, `webtoon.html` |
+| `assets/images/webtoon/ssomm.png` | 쏨쏨이 · 가로 4:3 칸에 맞춰 가운데 기준으로 잘림 | `index.html`, `webtoon.html` |
+| `assets/images/picturebook/mom.jpg` | 『엄마가 아픈 날』 표지 · 너비 고정, 원본 비율 그대로 | `index.html`, `picturebook.html` |
+| `assets/images/picturebook/laundry.jpg` | 『숲속세탁소』 표지 · 너비 고정, 원본 비율 그대로 | `index.html`, `picturebook.html` |
 
 ### 확인이 필요한 임시 문구 · 칸
 
