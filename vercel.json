@@ -1,11 +1,45 @@
 {
   "redirects": [
-    { "source": "/projects-6", "destination": "/projects.html#ai-code-book", "permanent": true },
-    { "source": "/illustration-portfolio", "destination": "/illustration.html", "permanent": true },
-    { "source": "/about", "destination": "/about.html", "permanent": true },
-    { "source": "/contact", "destination": "/contact.html", "permanent": true },
-    { "source": "/faq", "destination": "/contact.html", "permanent": true },
-    { "source": "/privacy-policy", "destination": "/", "permanent": true },
-    { "source": "/cookie-policy", "destination": "/", "permanent": true }
+    {
+      "source": "/projects-6",
+      "destination": "/projects.html#ai-code-book",
+      "permanent": true
+    },
+    {
+      "source": "/illustration-portfolio",
+      "destination": "/illustration.html",
+      "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/faq",
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/cookie-policy",
+      "destination": "/",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/illustration-inquiry",
+      "destination": "/illustration-inquiry.html"
+    }
   ]
 }
