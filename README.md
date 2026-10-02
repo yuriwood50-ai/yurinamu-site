@@ -1,4 +1,4 @@
-# 유리나무 — 일러스트레이터 윤지영 소개 사이트
+# 유리나무 — 윤지영 / 유리나무 공식 포트폴리오 사이트
 
 순수 HTML · CSS · JS로 만든 정적 사이트입니다. 빌드 과정 없이 파일 그대로 올리면 됩니다.
 
@@ -6,13 +6,20 @@
 
 | 경로 | 설명 |
 |---|---|
-| `index.html`, `illustration.html`, `webtoon.html`, `picturebook.html`, `class.html` | 메인 · 일러스트 · 웹툰·캐릭터 · 그림책 · 클래스 페이지 |
+| `index.html` | 홈 (Hero → Selected Works → Books & Characters → Projects → Class & Lecture → About → Contact) |
+| `portfolio.html` | 포트폴리오 목차 — 아래 세 페이지로 연결 |
+| `illustration.html`, `picturebook.html`, `webtoon.html` | 포트폴리오 하위: Illustration · Picture Books · Character & Webtoon |
+| `projects.html` | 프로젝트 (AI CODE BOOK · Stock Studio · 홍보스테이션) |
+| `class.html` | Class & Lecture — 대표 강의 「일반인을 위한 생성형 AI 첫걸음」 |
+| `about.html`, `contact.html` | 소개 · 문의 |
 | `style.css` | 모든 스타일 (디자인 토큰은 맨 위 `:root`) |
 | `assets/js/gallery.js` | `data/gallery.json`을 읽어 메인 히어로 이미지, 일러스트 그리드, 라이트박스를 만듦 |
 | `assets/js/optimize-images.js` | 일러스트 원본 → 웹용·썸네일 이미지 + `gallery.json` 생성 (Node 스크립트, 사이트에서는 쓰지 않음) |
 | `assets/images/illustration/` | 일러스트 **원본** (직접 넣는 곳 · 용량이 커서 Git에는 올리지 않음) |
 | `assets/images/illustration-web/` | 스크립트가 만든 웹용 이미지 (직접 수정하지 않기) |
 | `assets/images/webtoon/`, `assets/images/picturebook/` | 웹툰 대표 이미지 · 그림책 표지 |
+| `assets/images/projects/` | 프로젝트 대표 이미지 (16:10 칸에 맞춰 잘림) |
+| `assets/images/class/` | 강의 대표 이미지 (16:9 · 모바일에서는 왼쪽 기준 4:3으로 잘림) |
 | `data/gallery.json` | 스크립트가 만든 일러스트 목록 (직접 수정하지 않기) |
 
 ## 1. 로컬에서 실행하기
@@ -83,15 +90,9 @@ git push
 
 | 검색어 | 들어갈 내용 | 위치 |
 |---|---|---|
-| `(쏨쏨이 한 줄 소개)` | 쏨쏨이 한 줄 소개 | `index.html:84`, `webtoon.html:58` |
-| `(엄마가 아픈 날 한 줄 소개)` | 『엄마가 아픈 날』 한 줄 소개 | `index.html:104`, `picturebook.html:51` |
-| `(숲속세탁소 한 줄 소개)` | 『숲속세탁소』 한 줄 소개 | `index.html:120`, `picturebook.html:67` |
-| `[PLACEHOLDER_CLASS_TOPICS]` | 수업 주제 | `class.html:54` |
-| `[PLACEHOLDER_CLASS_TARGET]` | 수업 대상 | `class.html:61` |
-| `[PLACEHOLDER_CLASS_FORMAT]` | 수업 형태 (온라인/오프라인, 회차, 인원 등) | `class.html:68` |
-| `[PLACEHOLDER_CLASS_OUTCOME]` | 수업 결과물 | `class.html:75` |
-
-`class.html`의 네 곳은 바로 위에 `<!-- 여기를 채우세요 -->` 주석이 있습니다.
+| `(쏨쏨이 한 줄 소개)` | 쏨쏨이 한 줄 소개 | `index.html`, `webtoon.html` |
+| `(엄마가 아픈 날 한 줄 소개)` | 『엄마가 아픈 날』 한 줄 소개 | `index.html`, `picturebook.html` |
+| `(숲속세탁소 한 줄 소개)` | 『숲속세탁소』 한 줄 소개 | `index.html`, `picturebook.html` |
 
 ### 웹툰 대표 이미지 · 그림책 표지
 
@@ -110,8 +111,8 @@ git push
 
 | 위치 | 내용 |
 |---|---|
-| `illustration.html:35` | 페이지 소개 "풍경과 인물, 일상의 장면을 따뜻한 색으로 담습니다." |
-| `webtoon.html:34` | 페이지 소개 "짧은 이야기와 오래 곁에 두고 싶은 캐릭터를 만듭니다." |
-| `picturebook.html:34` | 페이지 소개 "한 장면씩 넘기며 천천히 읽히는 이야기를 그립니다." |
-| `webtoon.html:70–83` | 캐릭터 섹션 4칸 — "캐릭터 이미지" 칸과 "캐릭터 이름". 이미지는 `<div class="ph ph--portrait">…</div>`를 `<img class="ph ph--portrait" src="…" alt="…">`로 바꾸면 같은 비율(3:4)로 들어갑니다. |
+| `illustration.html`, `portfolio.html` | 페이지 소개 "풍경과 인물, 일상의 장면을 따뜻한 색으로 담습니다." |
+| `webtoon.html`, `portfolio.html` | 페이지 소개 "짧은 이야기와 오래 곁에 두고 싶은 캐릭터를 만듭니다." |
+| `picturebook.html`, `portfolio.html` | 페이지 소개 "한 장면씩 넘기며 천천히 읽히는 이야기를 그립니다." |
+| `webtoon.html` 캐릭터 섹션 | 캐릭터 섹션 4칸 — "캐릭터 이미지" 칸과 "캐릭터 이름". 이미지는 `<div class="ph ph--portrait">…</div>`를 `<img class="ph ph--portrait" src="…" alt="…">`로 바꾸면 같은 비율(3:4)로 들어갑니다. |
 | `assets/js/gallery.js` | 일러스트 이미지 대체 텍스트가 "유리나무 일러스트 1, 2, …" 번호로 되어 있습니다 (작품 제목 정보가 없어서). |

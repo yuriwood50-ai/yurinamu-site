@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>유리나무 | 일러스트레이터 윤지영</title>
-  <meta name="description" content="일러스트레이터 윤지영(유리나무)의 일러스트, 웹툰·캐릭터, 그림책, 클래스 소개">
+  <meta name="description" content="일러스트레이터 윤지영(유리나무)의 일러스트, 그림책, 캐릭터·웹툰, 프로젝트와 강의 소개">
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css">
   <link rel="stylesheet" href="style.css">
@@ -17,12 +17,13 @@
       <a class="brand" href="index.html">유리나무</a>
       <nav class="site-nav" aria-label="주요 메뉴">
         <ul class="nav-list">
-          <li><a href="illustration.html">일러스트</a></li>
-          <li><a href="webtoon.html">웹툰·캐릭터</a></li>
-          <li><a href="picturebook.html">그림책</a></li>
-          <li><a href="class.html">클래스</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="class.html">Class &amp; Lecture</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
-        <a class="link nav-ext" href="https://kmong.com/@유리나무" target="_blank" rel="noopener">크몽</a>
       </nav>
     </div>
   </header>
@@ -30,12 +31,12 @@
   <main class="container">
 
     <!-- 히어로 -->
-    <p class="hero-label">ILLUSTRATION / COMICS / PICTURE&nbsp;BOOKS / CLASS</p>
+    <p class="hero-label">ILLUSTRATOR · CREATOR · AI&nbsp;EDUCATOR</p>
 
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-head">
         <h1 class="headline hero-title" id="hero-title">그림에서 시작해,<br>이야기로 넓어집니다.</h1>
-        <p class="hero-name">일러스트레이터 윤지영</p>
+        <p class="hero-name">윤지영 / 유리나무</p>
       </div>
       <!-- gallery.json 첫 번째 이미지(full) -->
       <div class="hero-media" data-gallery-hero></div>
@@ -45,100 +46,173 @@
       </div>
     </section>
 
-    <!-- 일러스트 -->
-    <section class="section" aria-labelledby="sec-illust">
+    <!-- 대표 작품 -->
+    <section class="section" aria-labelledby="sec-works">
+      <p class="eyebrow section-eyebrow">Selected Works</p>
       <div class="section-head">
-        <h2 class="section-title" id="sec-illust">일러스트</h2>
+        <h2 class="section-title" id="sec-works">일러스트</h2>
         <a class="link" href="illustration.html">전체 작품 보기</a>
       </div>
       <!-- gallery.json 상위 6장 -->
       <ul class="gallery-grid" data-gallery data-limit="6"></ul>
     </section>
 
-    <!-- 웹툰 · 캐릭터 (이미지 파일이 없으면 회색 자리표시자로 바뀜) -->
-    <section class="section" aria-labelledby="sec-webtoon">
+    <!-- 그림책 · 캐릭터 (이미지 파일이 없으면 회색 자리표시자로 바뀜) -->
+    <section class="section" aria-labelledby="sec-books">
+      <p class="eyebrow section-eyebrow">Books &amp; Characters</p>
       <div class="section-head">
-        <h2 class="section-title" id="sec-webtoon">웹툰 · 캐릭터</h2>
+        <h2 class="section-title" id="sec-books">그림책 · 캐릭터</h2>
+        <a class="link" href="portfolio.html">포트폴리오 보기</a>
       </div>
-      <div class="grid grid-2">
+
+      <div class="subsection">
+        <h3 class="subsection-title">그림책</h3>
+        <div class="grid grid-2">
+          <article class="book">
+            <div class="media-frame media-frame--cover">
+              <img src="assets/images/picturebook/mom.jpg" width="800" height="999" alt="『엄마가 아픈 날』 표지" loading="lazy" onerror="this.parentNode.classList.add('is-empty'); this.remove()">
+              <span class="media-frame-label">표지 이미지</span>
+            </div>
+            <div class="book-body">
+              <h4 class="item-title">엄마가 아픈 날</h4>
+              <p class="caption">윤지영 지음 · 솔앤유 · 2023</p>
+              <p class="book-intro">(엄마가 아픈 날 한 줄 소개)</p>
+              <ul class="link-list">
+                <li><a class="link" href="https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000005206247" target="_blank" rel="noopener">교보문고</a></li>
+                <li><a class="link" href="https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791192727141" target="_blank" rel="noopener">알라딘</a></li>
+                <li><a class="link" href="https://www.yes24.com/product/goods/118630707" target="_blank" rel="noopener">YES24</a></li>
+              </ul>
+            </div>
+          </article>
+          <article class="book">
+            <div class="media-frame media-frame--cover">
+              <img src="assets/images/picturebook/laundry.jpg" width="800" height="800" alt="『숲속세탁소』 표지" loading="lazy" onerror="this.parentNode.classList.add('is-empty'); this.remove()">
+              <span class="media-frame-label">표지 이미지</span>
+            </div>
+            <div class="book-body">
+              <h4 class="item-title">숲속세탁소</h4>
+              <p class="caption">유리나무 지음 · 솔앤유 · 2024</p>
+              <p class="book-intro">(숲속세탁소 한 줄 소개)</p>
+              <ul class="link-list">
+                <li><a class="link" href="https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000009167666" target="_blank" rel="noopener">교보문고</a></li>
+                <li><a class="link" href="https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791172760304" target="_blank" rel="noopener">알라딘</a></li>
+                <li><a class="link" href="https://www.yes24.com/product/goods/134783916" target="_blank" rel="noopener">YES24</a></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">캐릭터 · 웹툰</h3>
+        <div class="grid grid-2">
+          <article>
+            <div class="media-frame">
+              <img src="assets/images/webtoon/eojjeoda.png" alt="어쩌다ai 대표 이미지" loading="lazy" onerror="this.parentNode.classList.add('is-empty'); this.remove()">
+              <span class="media-frame-label">대표 이미지</span>
+            </div>
+            <div class="series-meta">
+              <h4 class="item-title">어쩌다ai</h4>
+              <a class="link" href="https://www.instagram.com/eojjeoda_ai_toon/" target="_blank" rel="noopener">인스타그램</a>
+            </div>
+            <p class="series-desc caption">AI와 함께하는 작가의 일상을 그리는 인스타툰</p>
+          </article>
+          <article>
+            <div class="media-frame">
+              <img src="assets/images/webtoon/ssomm.png" alt="쏨쏨이 대표 이미지" loading="lazy" onerror="this.parentNode.classList.add('is-empty'); this.remove()">
+              <span class="media-frame-label">대표 이미지</span>
+            </div>
+            <div class="series-meta">
+              <h4 class="item-title">쏨쏨이</h4>
+              <a class="link" href="https://www.instagram.com/ssomm.ssomm/" target="_blank" rel="noopener">인스타그램</a>
+            </div>
+            <p class="series-desc caption">(쏨쏨이 한 줄 소개)</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 프로젝트 -->
+    <section class="section" aria-labelledby="sec-projects">
+      <p class="eyebrow section-eyebrow">Projects</p>
+      <div class="section-head">
+        <h2 class="section-title" id="sec-projects">프로젝트</h2>
+        <a class="link" href="projects.html">전체 프로젝트 보기</a>
+      </div>
+      <div class="grid grid-3">
         <article>
-          <div class="media-frame">
-            <img src="assets/images/webtoon/eojjeoda.png" alt="어쩌다ai 대표 이미지" loading="lazy" onerror="this.parentNode.classList.add('is-empty'); this.remove()">
+          <div class="media-frame media-frame--wide">
+            <img class="img-top" src="assets/images/projects/ai-code-book.jpg" alt="『AI CODE BOOK』 1권 개념서 · 2권 실전편 표지" loading="lazy" onerror="this.parentNode.classList.add('is-empty'); this.remove()">
             <span class="media-frame-label">대표 이미지</span>
           </div>
-          <div class="series-meta">
-            <h3 class="item-title">어쩌다ai</h3>
-            <a class="link" href="https://www.instagram.com/eojjeoda_ai_toon/" target="_blank" rel="noopener">인스타그램</a>
-          </div>
-          <p class="series-desc caption">AI와 함께하는 작가의 일상을 그리는 인스타툰</p>
+          <p class="eyebrow project-category">Publication · AI Education</p>
+          <h3 class="item-title">AI CODE BOOK</h3>
+          <p class="project-desc">프롬프트를 매번 새로 쓰지 않도록, 기록하고 분류하며 재사용하는 창작자의 작업 시스템을 책으로 정리했어요.</p>
+          <a class="link project-more" href="projects.html#ai-code-book">자세히 보기</a>
         </article>
         <article>
-          <div class="media-frame">
-            <img src="assets/images/webtoon/ssomm.png" alt="쏨쏨이 대표 이미지" loading="lazy" onerror="this.parentNode.classList.add('is-empty'); this.remove()">
+          <div class="media-frame media-frame--wide">
+            <img src="assets/images/projects/stock-studio.jpg" alt="스톡 스튜디오 세트 제조기 화면" loading="lazy" onerror="this.parentNode.classList.add('is-empty'); this.remove()">
             <span class="media-frame-label">대표 이미지</span>
           </div>
-          <div class="series-meta">
-            <h3 class="item-title">쏨쏨이</h3>
-            <a class="link" href="https://www.instagram.com/ssomm.ssomm/" target="_blank" rel="noopener">인스타그램</a>
+          <p class="eyebrow project-category">AI · Service Design</p>
+          <h3 class="item-title">Stock Studio</h3>
+          <p class="project-desc">스톡 이미지 제작에서 반복되는 세트 구성, 프롬프트 작성, 파일 정리를 하나의 흐름으로 묶은 제작 도구예요.</p>
+          <a class="link project-more" href="projects.html#stock-studio">자세히 보기</a>
+        </article>
+        <article>
+          <div class="media-frame media-frame--wide">
+            <img src="assets/images/projects/promotion-station.jpg" alt="홍보스테이션 대시보드 화면" loading="lazy" onerror="this.parentNode.classList.add('is-empty'); this.remove()">
+            <span class="media-frame-label">대표 이미지</span>
           </div>
-          <p class="series-desc caption">(쏨쏨이 한 줄 소개)</p>
+          <p class="eyebrow project-category">Content · Automation</p>
+          <h3 class="item-title">홍보스테이션</h3>
+          <p class="project-desc">블로그와 인스타그램 콘텐츠의 기획부터 제작, 검수, 게시 승인까지 한 화면에서 관리하는 운영 도구예요.</p>
+          <a class="link project-more" href="projects.html#promotion-station">자세히 보기</a>
         </article>
       </div>
     </section>
 
-    <!-- 그림책 -->
-    <section class="section" aria-labelledby="sec-book">
-      <div class="section-head">
-        <h2 class="section-title" id="sec-book">그림책</h2>
-      </div>
-      <!-- 표지 파일이 없으면 회색 자리표시자로 바뀜 -->
-      <div class="grid grid-2">
-        <article class="book">
-          <div class="media-frame media-frame--cover">
-            <img src="assets/images/picturebook/mom.jpg" width="800" height="999" alt="『엄마가 아픈 날』 표지" loading="lazy" onerror="this.parentNode.classList.add('is-empty'); this.remove()">
-            <span class="media-frame-label">표지 이미지</span>
-          </div>
-          <div class="book-body">
-            <h3 class="item-title">엄마가 아픈 날</h3>
-            <p class="caption">윤지영 지음 · 솔앤유 · 2023</p>
-            <p class="book-intro">(엄마가 아픈 날 한 줄 소개)</p>
-            <ul class="link-list">
-              <li><a class="link" href="https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000005206247" target="_blank" rel="noopener">교보문고</a></li>
-              <li><a class="link" href="https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791192727141" target="_blank" rel="noopener">알라딘</a></li>
-              <li><a class="link" href="https://www.yes24.com/product/goods/118630707" target="_blank" rel="noopener">YES24</a></li>
-            </ul>
-          </div>
-        </article>
-        <article class="book">
-          <div class="media-frame media-frame--cover">
-            <img src="assets/images/picturebook/laundry.jpg" width="800" height="800" alt="『숲속세탁소』 표지" loading="lazy" onerror="this.parentNode.classList.add('is-empty'); this.remove()">
-            <span class="media-frame-label">표지 이미지</span>
-          </div>
-          <div class="book-body">
-            <h3 class="item-title">숲속세탁소</h3>
-            <p class="caption">유리나무 지음 · 솔앤유 · 2024</p>
-            <p class="book-intro">(숲속세탁소 한 줄 소개)</p>
-            <ul class="link-list">
-              <li><a class="link" href="https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000009167666" target="_blank" rel="noopener">교보문고</a></li>
-              <li><a class="link" href="https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791172760304" target="_blank" rel="noopener">알라딘</a></li>
-              <li><a class="link" href="https://www.yes24.com/product/goods/134783916" target="_blank" rel="noopener">YES24</a></li>
-            </ul>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- 클래스 -->
+    <!-- 강의 (파란 구분선) -->
     <section class="section" aria-labelledby="sec-class">
       <div class="class-block">
         <div>
-          <p class="class-eyebrow">클래스 · 출강</p>
-          <h2 class="headline" id="sec-class">함께 만드는 창작의 시간</h2>
-          <p class="class-sub">그림 그리는 사람을 위한 AI 창작 수업</p>
+          <p class="class-eyebrow">Class &amp; Lecture · 90분 입문 특강</p>
+          <h2 class="headline" id="sec-class">일반인을 위한<br>생성형 AI 첫걸음</h2>
+          <p class="class-sub">생성형 AI의 기본 개념부터 질문하는 방법, 활용과 검증까지 일반인의 눈높이에서 배우는 90분 입문 특강.</p>
         </div>
         <div class="class-cta">
-          <a class="link" href="class.html">수업 문의</a>
+          <ul class="link-list">
+            <li><a class="link" href="class.html">강의 소개</a></li>
+            <li><a class="link" href="class.html#inquiry">출강 문의</a></li>
+          </ul>
         </div>
+      </div>
+    </section>
+
+    <!-- 소개 -->
+    <section class="section" aria-labelledby="sec-about">
+      <p class="eyebrow section-eyebrow">About</p>
+      <div class="rows">
+        <div class="row">
+          <div>
+            <h2 class="item-title" id="sec-about">윤지영 / 유리나무</h2>
+            <p class="caption">Illustrator · Creator · AI Educator</p>
+          </div>
+          <div class="row-body">
+            <p>그림과 이야기를 만들고, 생성형 AI를 창작과 실제 프로젝트에 활용합니다. 일러스트레이션과 그림책, 캐릭터 작업을 이어가며 AI 기반 콘텐츠와 교육 프로그램도 기획하고 있습니다.</p>
+            <a class="link" href="about.html">소개 더 보기</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 문의 -->
+    <section class="section" aria-labelledby="sec-contact">
+      <p class="eyebrow section-eyebrow">Contact</p>
+      <div class="cta-row">
+        <p id="sec-contact">일러스트 · 출판 · 강의 · 협업 문의</p>
+        <a class="link" href="contact.html">문의하기</a>
       </div>
     </section>
 

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>프로젝트 | 유리나무</title>
+  <meta name="description" content="유리나무가 그림 작업 속에서 만든 책과 도구 — AI CODE BOOK, Stock Studio, 홍보스테이션">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">유리나무</a>
+      <nav class="site-nav" aria-label="주요 메뉴">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="projects.html" aria-current="page">Projects</a></li>
+          <li><a href="class.html">Class &amp; Lecture</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="page-hero">
+      <p class="eyebrow">Projects</p>
+      <h1 class="headline">프로젝트</h1>
+      <p class="page-lead">그림 작업을 하며 부딪힌 문제를 직접 풀어 보려고 만든 책과 도구예요.</p>
+    </section>
+
+    <!-- 이미지 파일이 없으면 회색 자리표시자로 바뀜 -->
+    <section class="section" aria-label="프로젝트 목록">
+
+      <article class="project" id="ai-code-book">
+        <div class="media-frame media-frame--wide">
+          <img class="img-top" src="assets/images/projects/ai-code-book.jpg" alt="『AI CODE BOOK』 1권 개념서 · 2권 실전편 표지" onerror="this.parentNode.classList.add('is-empty'); this.remove()">
+          <span class="media-frame-label">대표 이미지</span>
+        </div>
+        <div class="project-body">
+          <p class="eyebrow project-category">Publication · AI Education</p>
+          <h2 class="series-title">AI CODE BOOK</h2>
+          <p class="series-intro">프롬프트를 매번 새로 쓰지 않도록, 기록하고 분류하며 재사용하는 창작자의 작업 시스템.</p>
+          <dl>
+            <dt>생각한 문제</dt>
+            <dd>좋은 프롬프트를 한 번 만드는 것보다, 작업에 쓴 프롬프트를 기록하고 필요할 때 다시 찾아 변형해 쓰는 일이 더 어려웠어요.</dd>
+            <dt>만든 것</dt>
+            <dd>작업 속에서 쌓인 프롬프트를 나만의 창작 자산으로 관리하는 방법을 담은 책. 1권 개념서는 코드북의 구조와 원리를, 2권 실전편은 실제 창작 작업에 적용한 과정을, 3권 확장편은 프롬프트 관리의 확장 · 협업 · 시스템화를 다뤄요.</dd>
+          </dl>
+          <a class="link btn-line" href="https://kmong.com/gig/791819" target="_blank" rel="noopener">크몽에서 보기</a>
+        </div>
+      </article>
+
+      <article class="project" id="stock-studio">
+        <div class="media-frame media-frame--wide">
+          <img src="assets/images/projects/stock-studio.jpg" alt="스톡 스튜디오 세트 제조기 화면" loading="lazy" onerror="this.parentNode.classList.add('is-empty'); this.remove()">
+          <span class="media-frame-label">대표 이미지</span>
+        </div>
+        <div class="project-body">
+          <p class="eyebrow project-category">AI · Service Design</p>
+          <h2 class="series-title">Stock Studio</h2>
+          <p class="series-intro">스톡 이미지 제작의 반복 작업을 하나의 흐름으로 묶은 제작 도구.</p>
+          <dl>
+            <dt>생각한 문제</dt>
+            <dd>스톡 이미지는 그리는 시간보다 무엇을 만들지 정하고, 프롬프트를 쓰고, 파일명과 메타데이터를 맞추는 데 더 많은 시간이 들었어요.</dd>
+            <dt>만든 것</dt>
+            <dd>주제별 세트를 만들고 프롬프트 카드와 파일명 규칙을 코드북 규칙대로 정리해, 등록용 파일까지 이어 주는 웹 도구예요.</dd>
+          </dl>
+        </div>
+      </article>
+
+      <article class="project" id="promotion-station">
+        <div class="media-frame media-frame--wide">
+          <img src="assets/images/projects/promotion-station.jpg" alt="홍보스테이션 대시보드 화면" loading="lazy" onerror="this.parentNode.classList.add('is-empty'); this.remove()">
+          <span class="media-frame-label">대표 이미지</span>
+        </div>
+        <div class="project-body">
+          <p class="eyebrow project-category">Content · Automation</p>
+          <h2 class="series-title">홍보스테이션</h2>
+          <p class="series-intro">콘텐츠 기획부터 게시 승인까지 한 화면에서 관리하는 운영 도구.</p>
+          <dl>
+            <dt>생각한 문제</dt>
+            <dd>블로그 글과 인스타그램 카드뉴스를 꾸준히 만들다 보니, 어떤 콘텐츠가 어느 단계에 있는지 놓치기 쉬웠어요.</dd>
+            <dt>만든 것</dt>
+            <dd>기획 · 제작 · 검수 · 승인 · 발행을 단계별로 나누고, 이번 주 할 일과 다음 행동을 대시보드에서 바로 확인하는 도구예요.</dd>
+          </dl>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="section">
+      <div class="cta-row">
+        <p>프로젝트 · 협업 문의</p>
+        <a class="link" href="contact.html">문의하기</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">유리나무</a>
+        <span class="footer-caption">ILLUSTRATOR YOON JIYOUNG</span>
+      </div>
+      <ul class="link-list">
+        <li><a class="link" href="https://www.instagram.com/eojjeoda_ai_toon/" target="_blank" rel="noopener">인스타그램</a></li>
+        <li><a class="link" href="https://kmong.com/@유리나무" target="_blank" rel="noopener">크몽</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>

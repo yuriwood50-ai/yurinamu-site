@@ -183,7 +183,10 @@ a:focus-visible {
 }
 
 .nav-list a {
+  font-size: 13px;
   font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .nav-list a:hover,
@@ -195,12 +198,6 @@ a:focus-visible {
 
 .nav-list a[aria-current="page"] {
   font-weight: 700;
-}
-
-.nav-ext {
-  padding-left: 28px;
-  border-left: 1px solid var(--color-line);
-  line-height: 1.2;
 }
 
 /* ---------- 공통 푸터 ---------- */
@@ -245,6 +242,24 @@ a:focus-visible {
   margin-bottom: 24px;
 }
 
+/* 섹션 제목 위 작은 영문 라벨 */
+.section-eyebrow {
+  margin-bottom: 4px;
+  color: var(--color-caption);
+}
+
+.subsection + .subsection {
+  margin-top: 64px;
+}
+
+.subsection-title {
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--color-line);
+  font-size: 15px;
+  font-weight: 700;
+}
+
 /* ---------- 이미지 자리 (배경 없이 실선만) ---------- */
 .ph {
   display: flex;
@@ -274,6 +289,7 @@ img.ph {
 }
 
 .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 24px; }
+.grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px 24px; }
 .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 
 @media (max-width: 900px) {
@@ -281,7 +297,8 @@ img.ph {
 }
 
 @media (max-width: 720px) {
-  .grid-2 { grid-template-columns: 1fr; }
+  .grid-2,
+  .grid-3 { grid-template-columns: 1fr; }
 }
 
 .work figcaption {
@@ -677,6 +694,228 @@ img.ph {
   }
 }
 
+/* ---------- 포트폴리오 하위 메뉴 ---------- */
+.sub-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--color-line);
+  font-size: 14px;
+}
+
+.sub-nav a {
+  color: var(--color-caption);
+  font-weight: 500;
+}
+
+.sub-nav a:hover,
+.sub-nav a[aria-current="page"] {
+  color: var(--color-text);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 1px;
+}
+
+.sub-nav + .eyebrow {
+  margin-top: 40px;
+}
+
+/* 포트폴리오 목차 (portfolio.html) — 정사각 대표 이미지 */
+.media-frame--square {
+  aspect-ratio: 1 / 1;
+}
+
+/* ---------- 프로젝트 ---------- */
+/* 홈 요약 — 대표 이미지 아래 카테고리 · 이름 · 한 줄 설명 */
+.project-category {
+  margin-top: 16px;
+  color: var(--color-caption);
+}
+
+.project-category + .item-title {
+  margin-top: 4px;
+}
+
+.project-desc {
+  margin-top: 8px;
+  font-size: 15px;
+}
+
+.project-more {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 15px;
+}
+
+.media-frame--wide {
+  aspect-ratio: 16 / 10;
+  border: 1px solid var(--color-line);
+}
+
+/* 4:3 표지 이미지를 16:10 칸에 넣을 때 제목이 있는 위쪽 기준으로 */
+.media-frame img.img-top {
+  object-position: center top;
+}
+
+/* projects.html — 이미지 좌 · 글 우, 프로젝트 사이 실선 */
+.project {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  align-items: start;
+  gap: 24px 48px;
+  scroll-margin-top: 24px;
+}
+
+.project + .project {
+  margin-top: 64px;
+  padding-top: 64px;
+  border-top: 1px solid var(--color-line);
+}
+
+.project .project-category {
+  margin-top: 0;
+}
+
+.project .series-title {
+  margin-top: 4px;
+}
+
+.project-body > dl {
+  margin-top: 24px;
+}
+
+.project-body dt {
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.project-body dd {
+  margin-top: 4px;
+  font-size: 15px;
+}
+
+.project-body .btn-line {
+  margin-top: 24px;
+}
+
+@media (max-width: 720px) {
+  .project {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .project + .project {
+    margin-top: 40px;
+    padding-top: 40px;
+  }
+}
+
+/* ---------- 강의 (class.html) ---------- */
+/* 16:9 대표 이미지 — 제목 글자가 들어 있어 자르지 않고 전체를 보여 줌 */
+.lecture-figure {
+  margin-top: 32px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--color-placeholder);
+}
+
+.lecture-figure img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: left center;
+}
+
+.lecture-head {
+  margin-top: 48px;
+}
+
+.lecture-head .headline {
+  font-size: clamp(32px, 5vw, 56px);
+  line-height: 1.2;
+}
+
+.lecture-head .class-sub {
+  margin-top: 12px;
+}
+
+.lecture-meta {
+  margin-top: 16px;
+}
+
+/* 줄 목록 안의 글머리 목록 */
+.bullet-list > li {
+  position: relative;
+  padding-left: 1em;
+}
+
+.bullet-list > li::before {
+  content: "·";
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+}
+
+.bullet-list > li + li,
+.num-list > li + li {
+  margin-top: 6px;
+}
+
+.num-list {
+  counter-reset: num;
+}
+
+.num-list > li {
+  counter-increment: num;
+  display: grid;
+  grid-template-columns: 2.4em minmax(0, 1fr);
+}
+
+.num-list > li::before {
+  content: counter(num, decimal-leading-zero);
+  color: var(--color-caption);
+  font-variant-numeric: tabular-nums;
+}
+
+/* 홈 · class.html 하단 문의 블록의 링크 두 개 */
+.class-cta .link-list {
+  justify-content: flex-end;
+  font-size: 17px;
+}
+
+/* ---------- 소개 · 문의 ---------- */
+.about-role {
+  margin-top: 12px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--color-caption);
+}
+
+.contact-links {
+  margin-top: 24px;
+}
+
+.class-body > * + * {
+  margin-top: 8px;
+}
+
+/* 이미지 자체가 링크일 때 (portfolio.html) — 갤러리와 같은 확대 */
+a.media-frame img {
+  transition: transform 0.3s ease;
+}
+
+a.media-frame:hover img {
+  transform: scale(1.03);
+}
+
+.contact-mail {
+  font-size: clamp(20px, 3vw, 28px);
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
 /* ---------- 모바일 ---------- */
 @media (max-width: 720px) {
   .header-inner {
@@ -689,22 +928,12 @@ img.ph {
 
   .site-nav {
     width: 100%;
-    gap: 16px;
-    overflow-x: auto;
-    white-space: nowrap;
-    scrollbar-width: none;
   }
 
-  .site-nav::-webkit-scrollbar {
-    display: none;
-  }
-
+  /* 메뉴 6개 — 좁은 화면에서는 두 줄로 */
   .nav-list {
-    gap: 16px;
-  }
-
-  .nav-ext {
-    padding-left: 16px;
+    flex-wrap: wrap;
+    gap: 6px 18px;
   }
 
   .page-hero {
@@ -715,20 +944,25 @@ img.ph {
     grid-template-columns: 1fr;
   }
 
-  .class-cta {
+  .class-cta,
+  .class-cta .link-list {
     justify-content: flex-start;
+  }
+
+  /* 강의 이미지: 왼쪽 글자 영역을 남기고 4:3으로 잘라 글자를 키움 */
+  .lecture-figure img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .lecture-head {
+    margin-top: 32px;
   }
 }
 
-/* 360px 안팎: 메뉴가 한 줄에 다 들어가도록 간격을 좁힘 */
+/* 360px 안팎 */
 @media (max-width: 400px) {
-  .site-nav,
   .nav-list {
-    gap: 12px;
-  }
-
-  .nav-ext {
-    padding-left: 12px;
+    gap: 6px 14px;
   }
 }
 
