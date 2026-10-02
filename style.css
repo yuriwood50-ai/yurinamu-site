@@ -796,8 +796,12 @@ img.ph {
   font-size: 15px;
 }
 
-.project-body .btn-line {
+.project-body > dl + .caption {
   margin-top: 24px;
+}
+
+.project-body .btn-group {
+  margin-top: 12px;
 }
 
 @media (max-width: 720px) {
