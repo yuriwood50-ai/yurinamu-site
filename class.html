@@ -94,13 +94,43 @@
           </div>
         </div>
         <div class="row" id="inquiry">
-          <h2 class="item-title">기관 · 단체 문의</h2>
           <div class="row-body">
+            <h2 class="item-title">기관 · 단체 문의</h2>
             <p>기관 · 단체 출강 문의를 받고 있어요. 희망 일정과 인원, 장소(온라인 · 오프라인)를 함께 알려 주시면 맞춰서 안내해 드려요.</p>
-            <div class="btn-group">
-              <a class="link btn-line" href="mailto:yuriwood50@gmail.com?subject=%EA%B0%95%EC%9D%98%20%EB%AC%B8%EC%9D%98">이메일로 문의하기</a>
-              <a class="link btn-line" href="https://kmong.com/@유리나무" target="_blank" rel="noopener">크몽에서 문의하기</a>
-              <a class="link btn-line" href="https://www.instagram.com/eojjeoda_ai_toon/" target="_blank" rel="noopener">인스타그램 DM</a>
+          </div>
+          <div class="row-body">
+            <!-- 전송: api/class-inquiry.js (일러스트 의뢰와 같은 Resend 방식) -->
+            <form class="inquiry-form" id="class-inquiry-form" novalidate>
+              <div class="field">
+                <label for="ci-org">기관 이름</label>
+                <input type="text" id="ci-org" name="org" required maxlength="200" autocomplete="organization">
+              </div>
+              <div class="field">
+                <label for="ci-email">이메일</label>
+                <input type="email" id="ci-email" name="email" required maxlength="254" autocomplete="email" inputmode="email">
+              </div>
+              <div class="field">
+                <label for="ci-message">문의 내용</label>
+                <textarea id="ci-message" name="message" rows="6" required maxlength="3000" placeholder="희망 일정, 인원, 장소(온라인/오프라인)를 함께 적어 주세요"></textarea>
+              </div>
+              <!-- 스팸 방지용 숨김 칸 — 사람에게는 보이지 않음 -->
+              <div class="hp-field" aria-hidden="true">
+                <label for="ci-website">웹사이트</label>
+                <input type="text" id="ci-website" name="website" tabindex="-1" autocomplete="off">
+              </div>
+              <p class="form-error" id="ci-error" role="alert" hidden></p>
+              <button type="submit" class="btn-solid">문의 보내기</button>
+            </form>
+            <p class="form-done" id="ci-done" role="status" tabindex="-1" hidden>문의가 접수됐어요. 확인 후 이메일로 답장드릴게요.</p>
+            <div class="inquiry-alt caption">
+              <p>
+                이메일 <a class="inquiry-mail" href="mailto:yuriwood50@gmail.com">yuriwood50@gmail.com</a>
+                <button type="button" class="copy-btn" data-copy="yuriwood50@gmail.com">주소 복사</button>
+              </p>
+              <ul class="link-list">
+                <li><a class="link" href="https://kmong.com/@유리나무" target="_blank" rel="noopener">크몽</a></li>
+                <li><a class="link" href="https://www.instagram.com/eojjeoda_ai_toon/" target="_blank" rel="noopener">인스타그램 DM</a></li>
+              </ul>
             </div>
           </div>
         </div>
@@ -142,5 +172,6 @@
     </div>
   </footer>
 
+  <script src="assets/js/class-inquiry.js" defer></script>
 </body>
 </html>
