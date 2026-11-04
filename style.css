@@ -964,6 +964,26 @@ img.ph {
   cursor: default;
 }
 
+/* <a> 로 쓰는 solid 버튼 (전자책 구매 등) */
+.btn-solid--link {
+  display: inline-block;
+  margin-top: 0;
+  text-decoration: none;
+}
+
+.btn-solid--link:hover {
+  opacity: 0.9;
+}
+
+.ebook-buy {
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.ebook-buy .caption {
+  margin-top: 8px;
+}
+
 .btn-solid:focus-visible,
 .copy-btn:focus-visible {
   outline: 2px solid var(--color-accent);
